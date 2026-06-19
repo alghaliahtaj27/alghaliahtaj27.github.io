@@ -176,6 +176,11 @@
     transition:color .15s ease, border-color .15s ease;
   }
   .case-link:hover{color:var(--pink-deep); border-color:var(--pink-deep);}
+  .case-status-pending{background:var(--ink-soft);}
+  .case-link-disabled{
+    color:var(--ink-soft); border-color:var(--line); cursor:default;
+  }
+  .case-link-disabled:hover{color:var(--ink-soft); border-color:var(--line);}
 
   /* ---------- EXTRA DOCS ---------- */
   .extra-grid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:18px;}
@@ -344,7 +349,7 @@
     <div class="case-grid">
 
       <div class="case-card">
-        <div class="case-top"><span class="case-id">CASE_FILE/0x01</span><span class="case-status">SOLVED</span></div>
+        <div class="case-top"><span class="case-id">CASE_FILE/0x01</span><span class="case-status case-status-pending">RESULTS PENDING</span></div>
         <h3>Cryptocurrency Investigative OSINT Framework</h3>
         <div class="case-sub">Final year dissertation · 2026</div>
         <p>A four-layer OSINT framework — infrastructure, content, social footprint, and blockchain — that investigates suspicious crypto websites and scores them with a trained classifier instead of a black-box yes/no.</p>
@@ -357,7 +362,7 @@
           <span class="tool-tag">Python</span><span class="tool-tag">scikit-learn</span>
           <span class="tool-tag">WHOIS/DNS</span><span class="tool-tag">Wallet tracing</span>
         </div>
-        <a class="case-link" href="ciof_dissertation.pdf" target="_blank" rel="noopener">View full dissertation (PDF) ↗</a>
+        <span class="case-link case-link-disabled">🔒 Full report available once results are released</span>
       </div>
 
       <div class="case-card">
